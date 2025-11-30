@@ -112,10 +112,11 @@ Internship Finder is made for college students to search internships efficiently
 ## Running the Project
 
 1. **Clone the repository**  
-```bash
+bash
 git clone <repo_url>
 cd <project_folder>
 
+-----------------------END---------------------
 ## My comments – Addressing Previous Feedback:
 
 1. Folder Structure and Static Files
