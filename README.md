@@ -119,31 +119,31 @@ cd <project_folder>
 -----------------------END---------------------
 ## My comments – Addressing Previous Feedback:
 
---Folder Structure/ Static Files:
+# Folder Structure/ Static Files:
 
 Professor feedback: “Setup a proper folder structure… CSS/images should be in static folder.”
 
 What I did: I organized the project the way Django recommends. All my CSS, images, and JS files are now in internships/static/, and I made a base.html template in internships/templates/internships/ that all the other pages use. This makes the layout consistent across the site.
 
---Minimum 5 Pages and Template Inheritance:
+# Minimum 5 Pages and Template Inheritance:
 
 Professor feedback: “No base template and inheritance… only three pages.”
 
 What I did: I created six pages: home.html, results.html, detail.html, login.html, create.html, and an optional saved page. All of them extend base.html so the navigation and design are the same on every page.
 
---(GET and POST)
+# (GET and POST)
 
 Professor feedback: “You need at least one page that utilizes a form and has proper GET and POST.”
 
 What I did: I added POST forms for admin login (admin_login() in views.py) and admin account creation (create_admin() in views.py). The search on the Results page uses a GET form to filter internships. All the forms are included in the templates (login.html and create.html).
 
---Redirection after login and signin
+# Redirection after login and signin
 
 Professor feedback: “No redirection after signing up or logging in.”
 
 What I did: After a successful admin login or creating a new admin account, users are now redirected to the Results page automatically.
 
---Database
+# Database
 
 Professor feedback: “Need SQLite database with at least two tables, no database committed.”
 
@@ -153,7 +153,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 
---permissions and messages
+# permissions and messages
 
 Professor feedback: “Program crashes if accessing pages without proper login, messages not defined.”
 
@@ -165,7 +165,7 @@ What I did: Only logged-in admins can view internship details or delete entries.
 
 All messages are shown in Bootstrap modals for consistency.
 
---Pop-Ups
+# Pop-Ups
 
 Professor feedback: “No styling applied, no pop-up messages for success/error.”
 
@@ -173,8 +173,9 @@ What I did: I added Bootstrap via CDN in base.html to style the pages. Since all
 
 --------------------------------------------
 ## REFERENCES:
+I mostly used info from these sites plus reddit and other forums for troubleshooting and debugging errors I was getting
 
-1. Django Basics & Structure
+# 1. Django Basics & Structure
 
 Django official documentation – project structure, apps, templates:
 https://docs.djangoproject.com/en/4.2/
@@ -182,7 +183,7 @@ https://docs.djangoproject.com/en/4.2/
 Django template inheritance:
 https://docs.djangoproject.com/en/4.2/topics/templates/#template-inheritance
 
-2. Forms & Authentication
+# 2. Forms & Authentication
 
 Django forms and POST/GET handling:
 https://docs.djangoproject.com/en/4.2/topics/forms/
@@ -193,7 +194,7 @@ https://docs.djangoproject.com/en/4.2/topics/auth/
 Creating superuser and login setup:
 https://docs.djangoproject.com/en/4.2/ref/django-admin/#createsuperuser
 
-3. Database & Models
+# 3. Database & Models
 
 Django models and SQLite integration:
 https://docs.djangoproject.com/en/4.2/topics/db/models/
@@ -201,7 +202,7 @@ https://docs.djangoproject.com/en/4.2/topics/db/models/
 Migrations in Django:
 https://docs.djangoproject.com/en/4.2/topics/migrations/
 
-4. Bootstrap & Styling
+# 4. Bootstrap & Styling
 
 Bootstrap official documentation (CSS/JS/CDN):
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
@@ -209,12 +210,12 @@ https://getbootstrap.com/docs/5.3/getting-started/introduction/
 Bootstrap Modals (for pop-up messages):
 https://getbootstrap.com/docs/5.3/components/modal/
 
-5. APIs
+# 5. APIs
 
 Adzuna Jobs API documentation (for fetching internship data):
 https://developer.adzuna.com/docs/search
 
-6. Git & GitHub
+# 6. Git & GitHub
 
 Ignoring files with .gitignore:
 https://git-scm.com/docs/gitignore
@@ -222,7 +223,7 @@ https://git-scm.com/docs/gitignore
 Pushing and pulling to GitHub:
 https://docs.github.com/en/get-started/using-git
 
-7. Environment Variables
+# 7. Environment Variables
 
 Using .env files and os.environ in Python:
 https://pypi.org/project/python-dotenv/
