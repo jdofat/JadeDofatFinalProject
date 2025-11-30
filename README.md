@@ -115,3 +115,59 @@ Internship Finder is made for college students to search internships efficiently
 ```bash
 git clone <repo_url>
 cd <project_folder>
+
+---
+
+## My comments – Addressing Previous Feedback:
+
+1. Folder Structure and Static Files
+
+Professor feedback: “Setup a proper folder structure… CSS/images should be in static folder.”
+
+What I did: I organized the project following Django conventions. All CSS, images, and JS files are in internships/static/, and I created a base template at internships/templates/internships/base.html that all other pages extend.
+
+2. Minimum 5 Pages and Template Inheritance
+
+Professor feedback: “No base template and inheritance… only three pages.”
+
+What I did: I implemented six pages—home.html, results.html, detail.html, login.html, create.html, and an optional saved page—all extending base.html for consistent layout and navigation.
+
+3. Form Handling (GET and POST)
+
+Professor feedback: “You need at least one page that utilizes a form and has proper GET and POST.”
+
+What I did: I added POST forms for admin login (views.py → admin_login()) and admin creation (views.py → create_admin()). The results page uses a GET form for internship search. All forms are implemented in the templates (login.html and create.html).
+
+4. Redirection After Login/Signup
+
+Professor feedback: “No redirection after signing up or logging in.”
+
+What I did: I made sure that after a successful admin login or account creation, the user is redirected to the Results page.
+
+5. Database Handling
+
+Professor feedback: “Need SQLite database with at least two tables, no database committed.”
+
+What I did: I created the Internship model in internships/models.py and configured the default SQLite database in settings.py. I also added .gitignore to exclude db.sqlite3 from GitHub. Database setup is handled properly with migrations:
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+6. User Permissions / Messages
+
+Professor feedback: “Program crashes if accessing pages without proper login, messages not defined.”
+
+What I did: Only logged-in admins can view internship details or delete entries. Unauthorized users now see clear messages:
+
+“You need to log in to view more details”
+
+“You need to log in as an admin to delete an entry”
+
+Messages are displayed consistently through Bootstrap modals in base.html.
+
+7. Styling / Pop-Ups
+
+Professor feedback: “No styling applied, no pop-up messages for success/error.”
+
+What I did: I included Bootstrap via CDN in base.html for styling. All pages inherit from base.html, so pop-up modals for success/error messages display consistently across the site.
