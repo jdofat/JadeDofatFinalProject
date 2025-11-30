@@ -1,0 +1,36 @@
+{# admin login page #}
+{# username and password fields #}
+{# shows success or error messages in a modal #}
+
+{% extends "internships/base.html" %}
+
+{% block content %}
+<h1>Admin Login</h1>
+<p>log in to view more details and delete entries</p>
+
+{% if message == "success" %}
+    <p style="color:green;">Login successful thank God.</p>
+{% elif message == "error" %}
+    <p style="color:red;">Invalid username or password.</p>
+{% endif %}
+
+{% if request.GET.message %}
+    <script>
+        window.onload = function() {
+            alert("{{ request.GET.message }}");
+        };
+    </script>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
+{% endblock %}
+
