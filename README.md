@@ -172,10 +172,10 @@ Professor feedback: “No styling applied, no pop-up messages for success/error.
 What I did: I added Bootstrap via CDN in base.html to style the pages. Since all pages extend base.html, the pop-up modals for success and error messages show consistently across the site.
 
 --------------------------------------------
-## REFERENCES:
+# REFERENCES:
 I mostly used info from these sites plus reddit and other forums for troubleshooting and debugging errors I was getting
 
-# 1. Django Basics & Structure
+## 1. Django Basics & Structure
 
 Django official documentation – project structure, apps, templates:
 https://docs.djangoproject.com/en/4.2/
@@ -183,7 +183,7 @@ https://docs.djangoproject.com/en/4.2/
 Django template inheritance:
 https://docs.djangoproject.com/en/4.2/topics/templates/#template-inheritance
 
-# 2. Forms & Authentication
+## 2. Forms & Authentication
 
 Django forms and POST/GET handling:
 https://docs.djangoproject.com/en/4.2/topics/forms/
@@ -194,7 +194,7 @@ https://docs.djangoproject.com/en/4.2/topics/auth/
 Creating superuser and login setup:
 https://docs.djangoproject.com/en/4.2/ref/django-admin/#createsuperuser
 
-# 3. Database & Models
+## 3. Database & Models
 
 Django models and SQLite integration:
 https://docs.djangoproject.com/en/4.2/topics/db/models/
@@ -202,7 +202,7 @@ https://docs.djangoproject.com/en/4.2/topics/db/models/
 Migrations in Django:
 https://docs.djangoproject.com/en/4.2/topics/migrations/
 
-# 4. Bootstrap & Styling
+## 4. Bootstrap & Styling
 
 Bootstrap official documentation (CSS/JS/CDN):
 https://getbootstrap.com/docs/5.3/getting-started/introduction/
@@ -210,12 +210,12 @@ https://getbootstrap.com/docs/5.3/getting-started/introduction/
 Bootstrap Modals (for pop-up messages):
 https://getbootstrap.com/docs/5.3/components/modal/
 
-# 5. APIs
+## 5. APIs
 
 Adzuna Jobs API documentation (for fetching internship data):
 https://developer.adzuna.com/docs/search
 
-# 6. Git & GitHub
+## 6. Git & GitHub
 
 Ignoring files with .gitignore:
 https://git-scm.com/docs/gitignore
@@ -223,7 +223,7 @@ https://git-scm.com/docs/gitignore
 Pushing and pulling to GitHub:
 https://docs.github.com/en/get-started/using-git
 
-# 7. Environment Variables
+## 7. Environment Variables
 
 Using .env files and os.environ in Python:
 https://pypi.org/project/python-dotenv/
