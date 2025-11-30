@@ -119,54 +119,54 @@ cd <project_folder>
 -----------------------END---------------------
 ## My comments – Addressing Previous Feedback:
 
-1. Folder Structure and Static Files
+--Folder Structure/ Static Files:
 
 Professor feedback: “Setup a proper folder structure… CSS/images should be in static folder.”
 
-What I did: I organized the project following Django conventions. All CSS, images, and JS files are in internships/static/, and I created a base template at internships/templates/internships/base.html that all other pages extend.
+What I did: I organized the project the way Django recommends. All my CSS, images, and JS files are now in internships/static/, and I made a base.html template in internships/templates/internships/ that all the other pages use. This makes the layout consistent across the site.
 
-2. Minimum 5 Pages and Template Inheritance
+--Minimum 5 Pages and Template Inheritance:
 
 Professor feedback: “No base template and inheritance… only three pages.”
 
-What I did: I implemented six pages—home.html, results.html, detail.html, login.html, create.html, and an optional saved page—all extending base.html for consistent layout and navigation.
+What I did: I created six pages: home.html, results.html, detail.html, login.html, create.html, and an optional saved page. All of them extend base.html so the navigation and design are the same on every page.
 
-3. Form Handling (GET and POST)
+--(GET and POST)
 
 Professor feedback: “You need at least one page that utilizes a form and has proper GET and POST.”
 
-What I did: I added POST forms for admin login (views.py → admin_login()) and admin creation (views.py → create_admin()). The results page uses a GET form for internship search. All forms are implemented in the templates (login.html and create.html).
+What I did: I added POST forms for admin login (admin_login() in views.py) and admin account creation (create_admin() in views.py). The search on the Results page uses a GET form to filter internships. All the forms are included in the templates (login.html and create.html).
 
-4. Redirection After Login/Signup
+--Redirection after login and signin
 
 Professor feedback: “No redirection after signing up or logging in.”
 
-What I did: I made sure that after a successful admin login or account creation, the user is redirected to the Results page.
+What I did: After a successful admin login or creating a new admin account, users are now redirected to the Results page automatically.
 
-5. Database Handling
+--Database
 
 Professor feedback: “Need SQLite database with at least two tables, no database committed.”
 
-What I did: I created the Internship model in internships/models.py and configured the default SQLite database in settings.py. I also added .gitignore to exclude db.sqlite3 from GitHub. Database setup is handled properly with migrations:
+What I did: I created the Internship model in internships/models.py and set up the default SQLite database in settings.py. I added a .gitignore to make sure db.sqlite3 isn’t pushed to GitHub. Database setup is handled properly using migrations:
 
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 
-6. User Permissions / Messages
+--permissions and messages
 
 Professor feedback: “Program crashes if accessing pages without proper login, messages not defined.”
 
-What I did: Only logged-in admins can view internship details or delete entries. Unauthorized users now see clear messages:
+What I did: Only logged-in admins can view internship details or delete entries. If a user isn’t logged in, they now see clear messages:
 
 “You need to log in to view more details”
 
 “You need to log in as an admin to delete an entry”
 
-Messages are displayed consistently through Bootstrap modals in base.html.
+All messages are shown in Bootstrap modals for consistency.
 
-7. Styling / Pop-Ups
+--Pop-Ups
 
 Professor feedback: “No styling applied, no pop-up messages for success/error.”
 
-What I did: I included Bootstrap via CDN in base.html for styling. All pages inherit from base.html, so pop-up modals for success/error messages display consistently across the site.
+What I did: I added Bootstrap via CDN in base.html to style the pages. Since all pages extend base.html, the pop-up modals for success and error messages show consistently across the site.
