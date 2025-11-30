@@ -116,8 +116,6 @@ Internship Finder is made for college students to search internships efficiently
 git clone <repo_url>
 cd <project_folder>
 
----
-
 ## My comments – Addressing Previous Feedback:
 
 1. Folder Structure and Static Files
